@@ -24,5 +24,6 @@ Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name(
 
 //admin
 Route::get('admin/home', [AdminController::class, 'index']);
-Route::get('admin', [LoginController::class, 'showLoginFrom'])->name('login.admin');
+Route::get('admin', [LoginController::class, 'showLoginFrom'])->name('admin.login');
 Route::post('admin', [LoginController::class, 'login']);
+Route::get('admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
